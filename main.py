@@ -45,7 +45,7 @@ graph = {
     'Chicago': {'New York': 800, 'San Francisco': 2200}
 }
 
-# Define the heuristic values
+'''# Define the heuristic values
 heuristic = {
     'Miami': 2000,
     'New York': 800,
@@ -54,7 +54,7 @@ heuristic = {
     'San Francisco': 2200,
     'Los Angeles': 2400,
     'Chicago': 0  # Goal city heuristic is 0
-}
+}'''
 
 #user will define start and goal city with error handling
 while True:
@@ -70,6 +70,19 @@ while True:
         break
     else:
         print("Goal City not found in the graph. Please enter a valid city.")
+
+ # Define the heuristic values
+heuristic = {}
+for city in graph:
+    if city != goalCity:
+        while True:
+            try:
+                heuristic[city] = float(input(f"Enter heuristic value for {city}: "))
+                break
+            except ValueError:
+                print("Please enter a valid numeric value.")
+
+heuristic[goalCity] = 0  # Goal city heuristic is 0
 
 path, total_cost = astar_search(graph, heuristic, startCity, goalCity)
 if path:
