@@ -1,4 +1,7 @@
-
+import heapq
+def astar_search(graph, heuristic, start, goal):
+    open_list = [(0, start)]  # (f-value, city)
+    visited = set()
 # Define the graph as an adjacency list
 graph = {
     'Dallas': {'Miami': 1200, 'Los Angeles': 1700, 'New York': 1500},
