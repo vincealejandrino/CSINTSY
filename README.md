@@ -15,6 +15,7 @@ Step-by-Step Instructions:
         to run the A* algorithm script, use: python astar_search.py
       
 Heuristic Search Guidelines:
+
     1. Enter the start city when prompted. Ensure the city is available in the graph.
     2. Enter the goal city when prompted. Ensure the city is available in the graph.
     3. Enter the heuristic values for each city except the goal city. Heuristic values should be numeric.
